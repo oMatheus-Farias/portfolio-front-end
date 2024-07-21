@@ -40,5 +40,6 @@ export const theme = {
   },
 }
 import tailwindcssAnimate from "tailwindcss-animate"
+import tailwindcssBorderGradientRadius from "tailwindcss-border-gradient-radius"
 
-export const plugins = [tailwindcssAnimate]
+export const plugins = [tailwindcssAnimate, tailwindcssBorderGradientRadius]
