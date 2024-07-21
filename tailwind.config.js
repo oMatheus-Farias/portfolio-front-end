@@ -31,11 +31,12 @@ export const theme = {
       gray: "#888888",
     },
     backgroundImage: {
-      "bg-violet-vertical":
+      "violet-vertical":
         "linear-gradient(180deg, #7900B2 0%, #4D53A1 38%, #338496 61%, #00C8F3 100%)",
-      "bg-violet-horizontal":
+      "violet-horizontal":
         "linear-gradient(90deg, #7900B2 0%, #4D53A1 38%, #338496 61%, #00C8F3 100%)",
-      "bg-purple-vertical": "linear-gradient(180deg, #0B002B 0%, #070023 100%)",
+      "purple-vertical": "linear-gradient(180deg, #0B002B 0%, #070023 100%)",
+      "me-img-mobile": "url('/me-img-mobile.png')",
     },
   },
 }
