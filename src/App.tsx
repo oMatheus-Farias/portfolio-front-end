@@ -3,13 +3,15 @@ import { FileDown, Github, Linkedin, Mail } from "lucide-react"
 import meImgDesktop from "/me-img-desktop.png"
 import meImgMobile from "/me-img-mobile.png"
 
-import ButtonLink from "./components/button-link"
+import { ButtonLink } from "./components/button-link"
+import { HeaderDesktop } from "./components/header-desktop"
 import { HeaderMobile } from "./components/header-mobile"
 
 const App = () => {
   return (
     <div className="h-screen bg-primary">
       <HeaderMobile />
+      <HeaderDesktop />
       <div className="flex lg:px-5 2xl:px-20">
         <div className="absolute mt-16 flex max-w-72 flex-col gap-2 px-4 sm:max-w-[480px] sm:px-10 lg:top-40 lg:max-w-[640px] 2xl:max-w-[700px]">
           <h1 className="text-sm font-bold text-secondary sm:text-3xl">
@@ -28,58 +30,46 @@ const App = () => {
 
           <div className="flex gap-3 lg:mt-5">
             <ButtonLink
-              className="w-6"
+              className="w-6 text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
               title="Linkedin"
               href="https://www.linkedin.com/in/matheusfariasdasneves"
             >
-              <Linkedin
-                size={16}
-                className="text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
-              />
+              <Linkedin size={16} />
             </ButtonLink>
 
             <ButtonLink
-              className="w-6"
+              className="w-6 text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
               title="GitHub"
               href="https://github.com/oMatheus-Farias"
             >
-              <Github
-                size={16}
-                className="text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
-              />
+              <Github size={16} />
             </ButtonLink>
 
             <ButtonLink
-              className="w-6"
+              className="w-6 text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
               title="E-mail"
               href="mailto:matheusfariasdasneves@gmail.com"
             >
-              <Mail
-                size={16}
-                className="text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
-              />
+              <Mail size={16} />
             </ButtonLink>
 
             <ButtonLink
-              className="w-6"
+              className="w-6 text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
               title="Baixar currículo"
               href="https://drive.google.com/u/0/uc?id=1UAXtZAoS9PPLrx4gsI6dRIjzJAsOz8Zb&export=download"
             >
-              <FileDown
-                size={16}
-                className="text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
-              />
+              <FileDown size={16} />
             </ButtonLink>
           </div>
         </div>
         <img
           src={meImgMobile}
-          alt=""
+          alt="Matheus Farias"
           className="h-[370px] w-full object-contain md:hidden"
         />
         <img
           src={meImgDesktop}
-          alt=""
+          alt="Matheus Farias"
           className="hidden h-[400px] w-full object-contain md:block lg:h-[700px]"
         />
       </div>

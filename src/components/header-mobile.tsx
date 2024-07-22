@@ -1,6 +1,6 @@
 import { AlignJustify, Github, Linkedin } from "lucide-react"
 
-import ButtonLink from "./button-link"
+import { ButtonLink } from "./button-link"
 import Logo from "./logo"
 import {
   Sheet,
