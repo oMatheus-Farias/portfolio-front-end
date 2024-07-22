@@ -13,7 +13,7 @@ import {
 
 const HeaderMobile = () => {
   return (
-    <header className="absolute flex w-full items-center gap-6 px-4 py-3">
+    <header className="absolute flex w-full items-center gap-6 px-4 py-3 lg:hidden">
       <Sheet>
         <SheetTrigger>
           <AlignJustify size={28} color="#FFFF" />
@@ -26,12 +26,16 @@ const HeaderMobile = () => {
             <SheetDescription>{undefined}</SheetDescription>
             <div className="flex items-center gap-4">
               <ButtonLink
+                title="Linkedin"
                 href={"https://www.linkedin.com/in/matheusfariasdasneves"}
               >
                 <Linkedin size={16} color="#FFFF" />
               </ButtonLink>
 
-              <ButtonLink href={"https://github.com/oMatheus-Farias"}>
+              <ButtonLink
+                href={"https://github.com/oMatheus-Farias"}
+                title="GitHub"
+              >
                 <Github size={16} color="#FFFF" />
               </ButtonLink>
             </div>

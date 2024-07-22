@@ -6,12 +6,14 @@ import { Button } from "./ui/button"
 interface ButtonLinkProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href: string
+  title: string
   className?: string
   children: React.ReactNode
 }
 
 const ButtonLink = ({
   href,
+  title,
   children,
   className,
   ...rest
@@ -22,7 +24,7 @@ const ButtonLink = ({
   )
 
   return (
-    <Button className={buttonClasses} {...rest}>
+    <Button className={buttonClasses} title={title} {...rest}>
       <a
         className="rounded-full bg-primary p-[6px]"
         href={href}

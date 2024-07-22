@@ -26,33 +26,49 @@ const App = () => {
             aplicações de alto nível e valor.
           </p>
 
-          <div className="flex gap-3">
+          <div className="flex gap-3 lg:mt-5">
             <ButtonLink
               className="w-6"
-              href={"https://www.linkedin.com/in/matheusfariasdasneves"}
+              title="Linkedin"
+              href="https://www.linkedin.com/in/matheusfariasdasneves"
             >
-              <Linkedin size={16} color="#FFFF" />
+              <Linkedin
+                size={16}
+                className="text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
+              />
             </ButtonLink>
 
             <ButtonLink
               className="w-6"
-              href={"https://www.linkedin.com/in/matheusfariasdasneves"}
+              title="GitHub"
+              href="https://github.com/oMatheus-Farias"
             >
-              <Github size={16} color="#FFFF" />
+              <Github
+                size={16}
+                className="text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
+              />
             </ButtonLink>
 
             <ButtonLink
               className="w-6"
+              title="E-mail"
               href="mailto:matheusfariasdasneves@gmail.com"
             >
-              <Mail size={16} color="#FFFF" />
+              <Mail
+                size={16}
+                className="text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
+              />
             </ButtonLink>
 
             <ButtonLink
               className="w-6"
+              title="Baixar currículo"
               href="https://drive.google.com/u/0/uc?id=1UAXtZAoS9PPLrx4gsI6dRIjzJAsOz8Zb&export=download"
             >
-              <FileDown size={16} color="#FFFF" />
+              <FileDown
+                size={16}
+                className="text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
+              />
             </ButtonLink>
           </div>
         </div>
