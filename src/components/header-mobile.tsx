@@ -13,7 +13,7 @@ import {
 
 const HeaderMobile = () => {
   return (
-    <header className="flex w-full items-center gap-6 px-4 py-3">
+    <header className="absolute flex w-full items-center gap-6 px-4 py-3">
       <Sheet>
         <SheetTrigger>
           <AlignJustify size={28} color="#FFFF" />
