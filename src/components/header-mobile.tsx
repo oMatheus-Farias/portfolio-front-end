@@ -1,12 +1,17 @@
 import { AlignJustify, Github, Linkedin } from "lucide-react"
 
-import portfolioLogo from "/portfolio-logo.svg"
-
-import { Button } from "./ui/button"
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet"
+import ButtonLink from "./button-link"
+import Logo from "./logo"
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "./ui/sheet"
 
 const HeaderMobile = () => {
-  //FIXME: Refactor components
   return (
     <header className="flex w-full items-center gap-6 px-4 py-3">
       <Sheet>
@@ -15,24 +20,20 @@ const HeaderMobile = () => {
         </SheetTrigger>
         <SheetContent side="left" className="w-[90%] bg-primary px-4">
           <SheetHeader className="mt-11 flex-row items-center justify-between">
-            <img
-              src={portfolioLogo}
-              alt="Matheus Farias - Desenvolvedor full-stack"
-              className="w-32"
-            />
-
+            <SheetTitle>
+              <Logo className={"w-36"} />
+            </SheetTitle>
+            <SheetDescription>{undefined}</SheetDescription>
             <div className="flex items-center gap-4">
-              <Button className="h-8 w-8 rounded-full bg-violet-vertical">
-                <a href="#" className="rounded-full bg-primary p-[6px]">
-                  <Linkedin size={16} color="#FFFF" />
-                </a>
-              </Button>
+              <ButtonLink
+                href={"https://www.linkedin.com/in/matheusfariasdasneves"}
+              >
+                <Linkedin size={16} color="#FFFF" />
+              </ButtonLink>
 
-              <Button className="h-8 w-8 rounded-full bg-violet-vertical">
-                <a href="#" className="rounded-full bg-primary p-[6px]">
-                  <Github size={16} color="#FFFF" />
-                </a>
-              </Button>
+              <ButtonLink href={"https://github.com/oMatheus-Farias"}>
+                <Github size={16} color="#FFFF" />
+              </ButtonLink>
             </div>
           </SheetHeader>
 
@@ -47,11 +48,7 @@ const HeaderMobile = () => {
         </SheetContent>
       </Sheet>
 
-      <img
-        src={portfolioLogo}
-        alt="Matheus Farias - Desenvolvedor full-stack"
-        className="w-36"
-      />
+      <Logo className={"w-36"} />
     </header>
   )
 }
