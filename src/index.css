@@ -63,4 +63,8 @@
   * {
     @apply font-sans;
   }
+
+  body {
+    @apply min-h-screen bg-primary;
+  }
 }
