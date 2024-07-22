@@ -29,6 +29,7 @@ export const theme = {
       bgDark: "#010010",
       green: "#419453",
       gray: "#888888",
+      deepSkyBlue: "#0CB8DE",
     },
     backgroundImage: {
       "violet-vertical":
