@@ -4,12 +4,13 @@ import meImgDesktop from "/me-img-desktop.png"
 import meImgMobile from "/me-img-mobile.png"
 
 import { ButtonLink } from "./components/button-link"
+import { CarouselTechnologies } from "./components/carousel-technologies"
 import { HeaderDesktop } from "./components/header-desktop"
 import { HeaderMobile } from "./components/header-mobile"
 
 const App = () => {
   return (
-    <div className="h-screen bg-primary">
+    <div className="min-h-screen pb-5">
       <HeaderMobile />
       <HeaderDesktop />
       <div className="flex lg:px-5 2xl:px-20">
@@ -72,6 +73,17 @@ const App = () => {
           alt="Matheus Farias"
           className="hidden h-[400px] w-full object-contain md:block lg:h-[700px]"
         />
+      </div>
+
+      <div className="mt-10 sm:mt-40">
+        <h2 className="h-10 bg-violet-horizontal bg-clip-text text-center text-lg font-bold text-transparent lg:text-[32px]">
+          Principais tecnologias que utilizo
+        </h2>
+
+        {/* FIXME: Add bacground image */}
+        <div>
+          <CarouselTechnologies />
+        </div>
       </div>
     </div>
   )
