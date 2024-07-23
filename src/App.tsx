@@ -80,9 +80,17 @@ const App = () => {
           Principais tecnologias que utilizo
         </h2>
 
-        {/* FIXME: Add bacground image */}
-        <div>
+        <div className="bg-background-01 bg-cover bg-center bg-no-repeat">
           <CarouselTechnologies />
+
+          <div className="flex flex-col text-center lg:gap-4">
+            <h2 className="mt-32 h-10 bg-violet-horizontal bg-clip-text text-lg font-bold text-transparent lg:mt-52 lg:text-[32px]">
+              Projetos
+            </h2>
+            <h3 className="text-sm font-semibold text-white lg:text-2xl">
+              Explore os meus principais projetos
+            </h3>
+          </div>
         </div>
       </div>
     </div>

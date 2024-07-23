@@ -13,9 +13,9 @@ const CardTechnologies = ({ img, name }: CardTechnologiesProps) => {
 
         <div className="min-h-[1px] min-w-full bg-white"></div>
 
-        <h3 className="text-2xl font-bold text-secondary lg:text-3xl">
+        <h4 className="text-2xl font-bold text-secondary lg:text-3xl">
           {name}
-        </h3>
+        </h4>
       </CardContent>
     </Card>
   )
