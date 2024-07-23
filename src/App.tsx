@@ -4,6 +4,7 @@ import meImgDesktop from "/me-img-desktop.png"
 import meImgMobile from "/me-img-mobile.png"
 
 import { ButtonLink } from "./components/button-link"
+import { CarouselProjects } from "./components/carousel-projects"
 import { CarouselTechnologies } from "./components/carousel-technologies"
 import { HeaderDesktop } from "./components/header-desktop"
 import { HeaderMobile } from "./components/header-mobile"
@@ -13,7 +14,7 @@ const App = () => {
     <div className="min-h-screen pb-5">
       <HeaderMobile />
       <HeaderDesktop />
-      <div className="flex lg:px-5 2xl:px-20">
+      <section className="flex lg:px-5 2xl:px-20">
         <div className="absolute mt-16 flex max-w-72 flex-col gap-2 px-4 sm:max-w-[480px] sm:px-10 lg:top-40 lg:max-w-[640px] 2xl:max-w-[700px]">
           <h1 className="text-sm font-bold text-secondary sm:text-3xl">
             Um pouco sobre mim
@@ -73,9 +74,9 @@ const App = () => {
           alt="Matheus Farias"
           className="hidden h-[400px] w-full object-contain md:block lg:h-[700px]"
         />
-      </div>
+      </section>
 
-      <div className="mt-10 sm:mt-40">
+      <section className="mt-10 sm:mt-40">
         <h2 className="h-10 bg-violet-horizontal bg-clip-text text-center text-lg font-bold text-transparent lg:text-[32px]">
           Principais tecnologias que utilizo
         </h2>
@@ -92,7 +93,11 @@ const App = () => {
             </h3>
           </div>
         </div>
-      </div>
+
+        <section className="mt-28">
+          <CarouselProjects />
+        </section>
+      </section>
     </div>
   )
 }
