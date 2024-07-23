@@ -39,7 +39,6 @@ export const theme = {
       "purple-vertical": "linear-gradient(180deg, #0B002B 0%, #070023 100%)",
       "me-img-mobile": "url('/me-img-mobile.png')",
       "me-img-desktop": "url('/me-img-desktop.png')",
-      "background-01": "url('/background-01.png')",
     },
   },
 }
