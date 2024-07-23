@@ -21,7 +21,7 @@ const CarouselProjects = () => {
           {Array.from({ length: 10 }).map((_, index) => (
             <CarouselItem
               key={index}
-              className="flex h-[400px] basis-60 items-center lg:basis-[550px]"
+              className="flex h-[400px] basis-[360px] items-center lg:basis-[550px]"
             >
               <CardProjects />
             </CarouselItem>
