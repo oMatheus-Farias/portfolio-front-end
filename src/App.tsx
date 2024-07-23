@@ -6,6 +6,7 @@ import meImgMobile from "/me-img-mobile.png"
 import { ButtonLink } from "./components/button-link"
 import { CarouselProjects } from "./components/carousel-projects"
 import { CarouselTechnologies } from "./components/carousel-technologies"
+import { ContactsComponent } from "./components/contacts"
 import { HeaderDesktop } from "./components/header-desktop"
 import { HeaderMobile } from "./components/header-mobile"
 
@@ -81,21 +82,44 @@ const App = () => {
           Principais tecnologias que utilizo
         </h2>
 
-        <div className="bg-background-01 bg-cover bg-center bg-no-repeat">
-          <CarouselTechnologies />
+        <img
+          src="/background-01.png"
+          alt="Background"
+          className="absolute top-[700px] z-[-1] h-full lg:h-auto"
+        />
+
+        <CarouselTechnologies />
+
+        <div className="flex flex-col text-center lg:gap-4">
+          <h2 className="mt-32 h-10 bg-violet-horizontal bg-clip-text text-lg font-bold text-transparent lg:mt-52 lg:text-[32px]">
+            Projetos
+          </h2>
+          <h3 className="text-sm font-semibold text-white lg:text-2xl">
+            Explore os meus principais projetos
+          </h3>
+        </div>
+
+        <section className="lg:mt-28">
+          <img
+            src="/background-02.png"
+            alt="Background"
+            className="absolute top-[1500px] z-[-1] h-full lg:top-[2200px] lg:h-auto"
+          />
+
+          <CarouselProjects />
 
           <div className="flex flex-col text-center lg:gap-4">
             <h2 className="mt-32 h-10 bg-violet-horizontal bg-clip-text text-lg font-bold text-transparent lg:mt-52 lg:text-[32px]">
-              Projetos
+              Contatos
             </h2>
             <h3 className="text-sm font-semibold text-white lg:text-2xl">
-              Explore os meus principais projetos
+              Sinta-se à vontade para entrar em contato!
             </h3>
           </div>
-        </div>
 
-        <section className="mt-28">
-          <CarouselProjects />
+          <div className="mx-auto mt-11 flex max-w-[580px] justify-between px-5 lg:mt-36 lg:max-w-[900px] lg:px-20">
+            <ContactsComponent />
+          </div>
         </section>
       </section>
     </div>
