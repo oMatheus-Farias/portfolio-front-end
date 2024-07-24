@@ -18,7 +18,7 @@ const App = () => {
       <HeaderDesktop />
 
       <section className="flex pl-5 lg:px-20">
-        <div className="absolute mt-16 flex max-w-72 flex-col gap-2 sm:max-w-[380px] md:max-w-[400px] lg:top-40 lg:max-w-[530px] 2xl:max-w-[600px]">
+        <div className="absolute mt-16 flex max-w-56 flex-col gap-2 sm:max-w-[380px] md:max-w-[400px] lg:top-40 lg:max-w-[530px] 2xl:max-w-[600px]">
           <h1 className="text-sm font-bold text-secondary sm:text-3xl">
             Um pouco sobre mim
           </h1>
@@ -52,7 +52,7 @@ const App = () => {
         <MeImage />
       </section>
 
-      <section className="mt-10 bg-cover sm:mt-40">
+      <section id="technologies" className="mt-10 bg-cover sm:mt-40">
         <TitleComponent.Title
           title="Principais tecnologias que utilizo"
           className="mt-0 text-center lg:mt-0"
@@ -62,7 +62,7 @@ const App = () => {
 
         <CarouselTechnologies />
 
-        <div className="flex flex-col text-center lg:gap-4">
+        <div id="projects" className="flex flex-col text-center lg:gap-4">
           <TitleComponent.Title title="Projetos" />
           <TitleComponent.Subtitle subtitle="Explore os meus principais projetos" />
         </div>
@@ -71,7 +71,7 @@ const App = () => {
       <section className="bg-background-02 lg:mt-28">
         <CarouselProjects />
 
-        <div className="flex flex-col text-center lg:gap-4">
+        <div id="contacts" className="flex flex-col text-center lg:gap-4">
           <TitleComponent.Title title="Contatos" />
           <TitleComponent.Subtitle subtitle="Sinta-se à vontade para entrar em contato!" />
         </div>

@@ -1,5 +1,7 @@
 import { Github, Linkedin } from "lucide-react"
 
+import { scrollToSection } from "@/helpers/scroll-to-section"
+
 import { ButtonLink } from "./button-link"
 import Logo from "./logo"
 
@@ -10,16 +12,22 @@ const HeaderDesktop = () => {
 
       <nav className="font-semibold text-white">
         <ul className="flex gap-7">
-          <li className="cursor-pointer transition-all duration-300 ease-in-out hover:text-secondary">
-            Sobre
-          </li>
-          <li className="cursor-pointer transition-all duration-300 ease-in-out hover:text-secondary">
+          <li
+            className="cursor-pointer transition-all duration-300 ease-in-out hover:text-secondary"
+            onClick={() => scrollToSection("technologies")}
+          >
             Tecnologias
           </li>
-          <li className="cursor-pointer transition-all duration-300 ease-in-out hover:text-secondary">
+          <li
+            className="cursor-pointer transition-all duration-300 ease-in-out hover:text-secondary"
+            onClick={() => scrollToSection("projects")}
+          >
             Projetos
           </li>
-          <li className="cursor-pointer transition-all duration-300 ease-in-out hover:text-secondary">
+          <li
+            className="cursor-pointer transition-all duration-300 ease-in-out hover:text-secondary"
+            onClick={() => scrollToSection("contacts")}
+          >
             Contatos
           </li>
         </ul>

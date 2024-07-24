@@ -1,4 +1,7 @@
 import { AlignJustify, Github, Linkedin } from "lucide-react"
+import { useState } from "react"
+
+import { scrollToSection } from "@/helpers/scroll-to-section"
 
 import { ButtonLink } from "./button-link"
 import Logo from "./logo"
@@ -12,9 +15,19 @@ import {
 } from "./ui/sheet"
 
 const HeaderMobile = () => {
+  const [open, setOpen] = useState<boolean>()
+
+  const handleScrollToSection = (sectionId: string) => {
+    setOpen((prev) => !prev)
+
+    setTimeout(() => {
+      scrollToSection(sectionId)
+    }, 400)
+  }
+
   return (
     <header className="absolute flex w-full items-center gap-6 px-5 py-3 lg:hidden">
-      <Sheet>
+      <Sheet open={open} onOpenChange={() => setOpen((prev) => !prev)}>
         <SheetTrigger>
           <AlignJustify size={28} color="#FFFF" />
         </SheetTrigger>
@@ -43,10 +56,15 @@ const HeaderMobile = () => {
 
           <nav className="mt-10 font-semibold text-white">
             <ul className="flex flex-col gap-7">
-              <li>Sobre</li>
-              <li>Tecnologias</li>
-              <li>Projetos</li>
-              <li>Contatos</li>
+              <li onClick={() => handleScrollToSection("technologies")}>
+                Tecnologias
+              </li>
+              <li onClick={() => handleScrollToSection("projects")}>
+                Projetos
+              </li>
+              <li onClick={() => handleScrollToSection("contacts")}>
+                Contatos
+              </li>
             </ul>
           </nav>
         </SheetContent>
