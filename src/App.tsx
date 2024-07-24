@@ -7,6 +7,7 @@ import { FooterComponent } from "./components/footer"
 import { HeaderDesktop } from "./components/header-desktop"
 import { HeaderMobile } from "./components/header-mobile"
 import { MeImage } from "./components/me-image"
+import { TitleComponent } from "./components/title"
 import { ACTION_BUTTONS_LINKS } from "./constants/action-buttons-links"
 import { returnIcon } from "./helpers/return-icon"
 
@@ -36,9 +37,10 @@ const App = () => {
             {ACTION_BUTTONS_LINKS.map((item) => {
               return (
                 <ButtonLink
-                  className="w-6 text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
+                  key={item.id}
                   title={item.title}
                   href={item.href}
+                  className="w-6 text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
                 >
                   {returnIcon(item.title, item.sizeIcon)}
                 </ButtonLink>
@@ -51,21 +53,18 @@ const App = () => {
       </section>
 
       <section className="mt-10 bg-cover sm:mt-40">
-        <h2 className="h-10 bg-violet-horizontal bg-clip-text text-center text-lg font-bold text-transparent lg:text-[32px]">
-          Principais tecnologias que utilizo
-        </h2>
+        <TitleComponent.Title
+          title="Principais tecnologias que utilizo"
+          className="mt-0 text-center lg:mt-0"
+        />
 
         <FirstBackgroundImage />
 
         <CarouselTechnologies />
 
         <div className="flex flex-col text-center lg:gap-4">
-          <h2 className="mt-32 h-10 bg-violet-horizontal bg-clip-text text-lg font-bold text-transparent lg:mt-52 lg:text-[32px]">
-            Projetos
-          </h2>
-          <h3 className="text-sm font-semibold text-white lg:text-2xl">
-            Explore os meus principais projetos
-          </h3>
+          <TitleComponent.Title title="Projetos" />
+          <TitleComponent.Subtitle subtitle="Explore os meus principais projetos" />
         </div>
       </section>
 
@@ -73,12 +72,8 @@ const App = () => {
         <CarouselProjects />
 
         <div className="flex flex-col text-center lg:gap-4">
-          <h2 className="mt-32 h-10 bg-violet-horizontal bg-clip-text text-lg font-bold text-transparent lg:mt-52 lg:text-[32px]">
-            Contatos
-          </h2>
-          <h3 className="text-sm font-semibold text-white lg:text-2xl">
-            Sinta-se à vontade para entrar em contato!
-          </h3>
+          <TitleComponent.Title title="Contatos" />
+          <TitleComponent.Subtitle subtitle="Sinta-se à vontade para entrar em contato!" />
         </div>
 
         <div className="mx-auto mt-11 flex max-w-[580px] justify-between px-5 lg:mt-36 lg:max-w-[900px] lg:px-20">
