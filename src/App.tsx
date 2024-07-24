@@ -7,12 +7,13 @@ import { ButtonLink } from "./components/button-link"
 import { CarouselProjects } from "./components/carousel-projects"
 import { CarouselTechnologies } from "./components/carousel-technologies"
 import { ContactsComponent } from "./components/contacts"
+import { FooterComponent } from "./components/footer"
 import { HeaderDesktop } from "./components/header-desktop"
 import { HeaderMobile } from "./components/header-mobile"
 
 const App = () => {
   return (
-    <div className="min-h-screen pb-5">
+    <div className="min-h-screen">
       <HeaderMobile />
       <HeaderDesktop />
       <section className="flex lg:px-5 2xl:px-20">
@@ -77,15 +78,27 @@ const App = () => {
         />
       </section>
 
-      <section className="mt-10 sm:mt-40">
+      <section className="mt-10 bg-cover sm:mt-40">
         <h2 className="h-10 bg-violet-horizontal bg-clip-text text-center text-lg font-bold text-transparent lg:text-[32px]">
           Principais tecnologias que utilizo
         </h2>
 
         <img
+          src="/background-01-mobile.png"
+          alt="Background"
+          className="absolute z-[-1] h-full w-full lg:hidden"
+        />
+
+        <img
           src="/background-01.png"
           alt="Background"
-          className="absolute top-[700px] z-[-1] h-full lg:h-auto"
+          className="absolute top-[700px] z-[-1] hidden h-full w-full lg:block lg:h-auto 0xl:hidden"
+        />
+
+        <img
+          src="/background-01-xl.png"
+          alt="Background"
+          className="absolute top-[700px] z-[-1] hidden h-full w-full 0xl:block"
         />
 
         <CarouselTechnologies />
@@ -98,29 +111,27 @@ const App = () => {
             Explore os meus principais projetos
           </h3>
         </div>
+      </section>
 
-        <section className="lg:mt-28">
-          <img
-            src="/background-02.png"
-            alt="Background"
-            className="absolute top-[1500px] z-[-1] h-full lg:top-[2200px] lg:h-auto"
-          />
+      <section className="bg-background-02 lg:mt-28">
+        <CarouselProjects />
 
-          <CarouselProjects />
+        <div className="flex flex-col text-center lg:gap-4">
+          <h2 className="mt-32 h-10 bg-violet-horizontal bg-clip-text text-lg font-bold text-transparent lg:mt-52 lg:text-[32px]">
+            Contatos
+          </h2>
+          <h3 className="text-sm font-semibold text-white lg:text-2xl">
+            Sinta-se à vontade para entrar em contato!
+          </h3>
+        </div>
 
-          <div className="flex flex-col text-center lg:gap-4">
-            <h2 className="mt-32 h-10 bg-violet-horizontal bg-clip-text text-lg font-bold text-transparent lg:mt-52 lg:text-[32px]">
-              Contatos
-            </h2>
-            <h3 className="text-sm font-semibold text-white lg:text-2xl">
-              Sinta-se à vontade para entrar em contato!
-            </h3>
-          </div>
+        <div className="mx-auto mt-11 flex max-w-[580px] justify-between px-5 lg:mt-36 lg:max-w-[900px] lg:px-20">
+          <ContactsComponent />
+        </div>
 
-          <div className="mx-auto mt-11 flex max-w-[580px] justify-between px-5 lg:mt-36 lg:max-w-[900px] lg:px-20">
-            <ContactsComponent />
-          </div>
-        </section>
+        <div className="mt-28 lg:mt-64">
+          <FooterComponent />
+        </div>
       </section>
     </div>
   )
