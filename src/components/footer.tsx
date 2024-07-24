@@ -5,7 +5,7 @@ import Logo from "./logo"
 
 const FooterComponent = () => {
   return (
-    <footer className="flex min-h-28 w-full items-center justify-between bg-black px-5 opacity-80 lg:h-72 lg:px-20">
+    <footer className="flex min-h-28 w-full items-center justify-between bg-black px-5 opacity-80 lg:h-64 lg:px-20">
       <div className="flex flex-col items-start">
         <Logo className="h-6 lg:h-10" />
         <span className="text-xs text-white lg:text-base">

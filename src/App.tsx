@@ -16,8 +16,8 @@ const App = () => {
     <div className="min-h-screen">
       <HeaderMobile />
       <HeaderDesktop />
-      <section className="flex lg:px-5 2xl:px-20">
-        <div className="absolute mt-16 flex max-w-72 flex-col gap-2 px-4 sm:max-w-[480px] sm:px-10 lg:top-40 lg:max-w-[640px] 2xl:max-w-[700px]">
+      <section className="flex pl-5 lg:px-20">
+        <div className="absolute mt-16 flex max-w-72 flex-col gap-2 sm:max-w-[380px] md:max-w-[400px] lg:top-40 lg:max-w-[530px] 2xl:max-w-[600px]">
           <h1 className="text-sm font-bold text-secondary sm:text-3xl">
             Um pouco sobre mim
           </h1>
@@ -98,7 +98,7 @@ const App = () => {
         <img
           src="/background-01-xl.png"
           alt="Background"
-          className="absolute top-[700px] z-[-1] hidden h-full w-full 0xl:block"
+          className="absolute top-[980px] z-[-1] hidden h-[800px] w-full 0xl:block"
         />
 
         <CarouselTechnologies />
