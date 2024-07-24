@@ -19,8 +19,8 @@ const CarouselTechnologies = () => {
         className="mt-10 w-full overflow-hidden lg:mt-28"
       >
         <CarouselContent className="w-full gap-8 px-5 lg:px-20">
-          {TECHNOLOGIES.map((item, index) => (
-            <CarouselItem key={index} className="basis-60 lg:basis-72">
+          {TECHNOLOGIES.map((item) => (
+            <CarouselItem key={item.id} className="basis-60 lg:basis-72">
               <CardTechnologies img={item.img} name={item.name} />
             </CarouselItem>
           ))}
