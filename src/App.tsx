@@ -1,5 +1,3 @@
-import { FileDown, Github, Linkedin, Mail } from "lucide-react"
-
 import meImgDesktop from "/me-img-desktop.png"
 import meImgMobile from "/me-img-mobile.png"
 
@@ -10,6 +8,8 @@ import { ContactsComponent } from "./components/contacts"
 import { FooterComponent } from "./components/footer"
 import { HeaderDesktop } from "./components/header-desktop"
 import { HeaderMobile } from "./components/header-mobile"
+import { ACTION_BUTTONS_LINKS } from "./constants/action-buttons-links"
+import { returnIcon } from "./helpers/return-icon"
 
 const App = () => {
   return (
@@ -33,39 +33,20 @@ const App = () => {
           </p>
 
           <div className="flex gap-3 lg:mt-5">
-            <ButtonLink
-              className="w-6 text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
-              title="Linkedin"
-              href="https://www.linkedin.com/in/matheusfariasdasneves"
-            >
-              <Linkedin size={16} />
-            </ButtonLink>
-
-            <ButtonLink
-              className="w-6 text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
-              title="GitHub"
-              href="https://github.com/oMatheus-Farias"
-            >
-              <Github size={16} />
-            </ButtonLink>
-
-            <ButtonLink
-              className="w-6 text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
-              title="E-mail"
-              href="mailto:matheusfariasdasneves@gmail.com"
-            >
-              <Mail size={16} />
-            </ButtonLink>
-
-            <ButtonLink
-              className="w-6 text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
-              title="Baixar currículo"
-              href="https://drive.google.com/u/0/uc?id=1UAXtZAoS9PPLrx4gsI6dRIjzJAsOz8Zb&export=download"
-            >
-              <FileDown size={16} />
-            </ButtonLink>
+            {ACTION_BUTTONS_LINKS.map((item) => {
+              return (
+                <ButtonLink
+                  className="w-6 text-white transition-all duration-300 ease-out hover:text-deepSkyBlue"
+                  title={item.title}
+                  href={item.href}
+                >
+                  {returnIcon(item.title, item.sizeIcon)}
+                </ButtonLink>
+              )
+            })}
           </div>
         </div>
+
         <img
           src={meImgMobile}
           alt="Matheus Farias"
