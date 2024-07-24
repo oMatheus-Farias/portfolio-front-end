@@ -1,6 +1,3 @@
-import meImgDesktop from "/me-img-desktop.png"
-import meImgMobile from "/me-img-mobile.png"
-
 import { ButtonLink } from "./components/button-link"
 import { CarouselProjects } from "./components/carousel-projects"
 import { CarouselTechnologies } from "./components/carousel-technologies"
@@ -8,6 +5,7 @@ import { ContactsComponent } from "./components/contacts"
 import { FooterComponent } from "./components/footer"
 import { HeaderDesktop } from "./components/header-desktop"
 import { HeaderMobile } from "./components/header-mobile"
+import { MeImage } from "./components/me-image"
 import { ACTION_BUTTONS_LINKS } from "./constants/action-buttons-links"
 import { returnIcon } from "./helpers/return-icon"
 
@@ -16,6 +14,7 @@ const App = () => {
     <div className="min-h-screen">
       <HeaderMobile />
       <HeaderDesktop />
+
       <section className="flex pl-5 lg:px-20">
         <div className="absolute mt-16 flex max-w-72 flex-col gap-2 sm:max-w-[380px] md:max-w-[400px] lg:top-40 lg:max-w-[530px] 2xl:max-w-[600px]">
           <h1 className="text-sm font-bold text-secondary sm:text-3xl">
@@ -47,16 +46,7 @@ const App = () => {
           </div>
         </div>
 
-        <img
-          src={meImgMobile}
-          alt="Matheus Farias"
-          className="h-[370px] w-full object-contain md:hidden"
-        />
-        <img
-          src={meImgDesktop}
-          alt="Matheus Farias"
-          className="hidden h-[400px] w-full object-contain md:block lg:h-[700px]"
-        />
+        <MeImage />
       </section>
 
       <section className="mt-10 bg-cover sm:mt-40">
