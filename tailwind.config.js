@@ -42,6 +42,7 @@ export const theme = {
       "background-01-mobile": "url('/background-01-mobile.png')",
       "background-01": "url('/background-01.png')",
       "background-01-xl": "url('/background-01-xl.png')",
+      "background-02-mobile": "url('/background-02-mobile.png')",
       "background-02": "url('/background-02.png')",
     },
     screens: {

@@ -64,14 +64,14 @@ const PortfolioPage = () => {
 
         <div
           id="projects"
-          className="mt-32 flex flex-col text-center lg:mt-52 lg:gap-4"
+          className="mt-32 flex flex-col text-center lg:mt-80 lg:gap-4"
         >
           <TitleComponent.Title title="Projetos" />
           <TitleComponent.Subtitle subtitle="Explore os meus principais projetos" />
         </div>
       </section>
 
-      <section className="bg-background-02 lg:mt-28">
+      <section className="bg-background-02-mobile bg-center lg:mt-28 lg:bg-background-02 lg:bg-cover">
         <CarouselProjects />
 
         <div
