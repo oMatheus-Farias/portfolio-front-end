@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel"
 
 import { CardProjects } from "./card-projects"
+import { SkeletonProjects } from "./skeleton-projects"
 
 interface IProjects {
   id: string
@@ -38,9 +39,14 @@ const CarouselProjects = () => {
       })
   })
 
-  //FIXME: Add a loading component
   if (isLoading) {
-    return <div className="text-white">Loading...</div>
+    return (
+      <div className="flex w-full gap-12 overflow-hidden px-5 lg:gap-16 lg:px-20">
+        {Array.from({ length: 10 }).map((_, index) => (
+          <SkeletonProjects key={index} />
+        ))}
+      </div>
+    )
   }
 
   return (
@@ -49,7 +55,7 @@ const CarouselProjects = () => {
         opts={{
           align: "start",
         }}
-        className="mt-10 w-full overflow-hidden lg:mt-28"
+        className="w-full overflow-hidden lg:mt-28"
       >
         <CarouselContent className="w-full gap-8 px-5 lg:px-20">
           {data?.map((item) => (
