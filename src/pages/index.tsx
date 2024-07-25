@@ -52,7 +52,7 @@ const PortfolioPage = () => {
         <MeImage />
       </section>
 
-      <section id="technologies" className="mt-10 bg-cover sm:mt-40">
+      <section id="technologies" className="mt-32 bg-cover sm:mt-40">
         <TitleComponent.Title
           title="Principais tecnologias que utilizo"
           className="mt-0 text-center lg:mt-0"
@@ -62,7 +62,10 @@ const PortfolioPage = () => {
 
         <CarouselTechnologies />
 
-        <div id="projects" className="flex flex-col text-center lg:gap-4">
+        <div
+          id="projects"
+          className="mt-32 flex flex-col text-center lg:mt-52 lg:gap-4"
+        >
           <TitleComponent.Title title="Projetos" />
           <TitleComponent.Subtitle subtitle="Explore os meus principais projetos" />
         </div>
@@ -71,7 +74,10 @@ const PortfolioPage = () => {
       <section className="bg-background-02 lg:mt-28">
         <CarouselProjects />
 
-        <div id="contacts" className="flex flex-col text-center lg:gap-4">
+        <div
+          id="contacts"
+          className="mt-24 flex flex-col text-center lg:mt-52 lg:gap-4"
+        >
           <TitleComponent.Title title="Contatos" />
           <TitleComponent.Subtitle subtitle="Sinta-se à vontade para entrar em contato!" />
         </div>
