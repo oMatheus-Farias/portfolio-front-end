@@ -44,6 +44,7 @@ export const theme = {
       "background-01-xl": "url('/background-01-xl.png')",
       "background-02-mobile": "url('/background-02-mobile.png')",
       "background-02": "url('/background-02.png')",
+      "background-login": "url('/background-login.png')",
     },
     screens: {
       "0xl": "1374px",
