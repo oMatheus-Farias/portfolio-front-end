@@ -46,8 +46,8 @@ export const TECHNOLOGIES = [
   },
   {
     id: "10",
-    name: "Jest",
-    img: "/jest.png",
+    name: "NodeJS",
+    img: "/nodejs.png",
   },
   {
     id: "11",
@@ -56,21 +56,26 @@ export const TECHNOLOGIES = [
   },
   {
     id: "12",
-    name: "Git",
-    img: "/git.png",
-  },
-  {
-    id: "13",
-    name: "GitHub",
-    img: "/github.png",
-  },
-  {
-    id: "14",
     name: "Docker",
     img: "/docker.png",
   },
   {
+    id: "13",
+    name: "Git",
+    img: "/git.png",
+  },
+  {
+    id: "14",
+    name: "GitHub",
+    img: "/github.png",
+  },
+  {
     id: "15",
+    name: "Jest",
+    img: "/jest.png",
+  },
+  {
+    id: "16",
     name: "Figma",
     img: "/figma.png",
   },
