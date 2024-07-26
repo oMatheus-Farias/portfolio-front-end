@@ -8,7 +8,7 @@ const FooterComponent = () => {
     <footer className="flex min-h-28 w-full items-center justify-between bg-black px-5 opacity-80 lg:h-64 lg:px-20">
       <div className="flex flex-col items-start">
         <Logo className="h-6 lg:h-10" />
-        <span className="text-[10px] text-white sm:text-xs lg:text-base">
+        <span className="text-[0.625rem] text-white sm:text-xs lg:text-base">
           Desenvolvido por Matheus Farias - 2024
         </span>
       </div>

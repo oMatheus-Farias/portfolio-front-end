@@ -61,7 +61,7 @@ const CarouselProjects = () => {
           {data?.map((item) => (
             <CarouselItem
               key={item.id}
-              className="flex h-[400px] basis-[360px] items-center lg:basis-[550px]"
+              className="flex h-[25rem] basis-[22.5rem] items-center lg:basis-[34.375rem]"
             >
               <CardProjects image={item.imagesUrl[0]} name={item.name} />
             </CarouselItem>

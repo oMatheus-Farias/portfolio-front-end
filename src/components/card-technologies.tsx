@@ -7,8 +7,8 @@ interface CardTechnologiesProps {
 
 const CardTechnologies = ({ img, name }: CardTechnologiesProps) => {
   return (
-    <Card className="flex h-[360px] w-60 items-center justify-center rounded-[10px] bg-violet-vertical p-[2px] lg:h-[400px] lg:w-72">
-      <CardContent className="flex h-full w-full flex-col items-center justify-between rounded-[10px] bg-purple-vertical p-4 pt-10 lg:p-5">
+    <Card className="flex h-[22.5rem] w-60 items-center justify-center rounded-[0.625rem] bg-violet-vertical p-[0.125rem] lg:h-[25rem] lg:w-72">
+      <CardContent className="flex h-full w-full flex-col items-center justify-between rounded-[0.625rem] bg-purple-vertical p-4 pt-10 lg:p-5">
         <img src={img} alt={name} className="h-36 object-contain lg:h-48" />
 
         <div className="min-h-[1px] min-w-full bg-white"></div>

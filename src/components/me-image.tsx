@@ -12,7 +12,7 @@ const MeImage = () => {
       <img
         src={meImgDesktop}
         alt="Matheus Farias"
-        className="hidden h-[400px] w-full object-contain md:block lg:h-[700px]"
+        className="hidden h-[25rem] w-full object-contain md:block lg:h-[43.75rem]"
       />
     </>
   )

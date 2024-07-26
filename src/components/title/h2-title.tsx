@@ -6,7 +6,7 @@ export interface H2TitleProps {
 const H2Title = ({ title, className = "" }: H2TitleProps) => {
   return (
     <h2
-      className={`h-10 bg-violet-horizontal bg-clip-text text-lg font-bold text-transparent lg:text-[32px] ${className}`}
+      className={`h-10 bg-violet-horizontal bg-clip-text text-lg font-bold text-transparent lg:text-[2rem] ${className}`}
     >
       {title}
     </h2>
