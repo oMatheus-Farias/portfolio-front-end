@@ -11,6 +11,7 @@ import { ButtonLink } from "@/components/button-link"
 import { IProjects } from "@/components/carousel-projects"
 import { FooterComponent } from "@/components/footer"
 import Logo from "@/components/logo"
+import { SkeletonProjectDetail } from "@/components/skeleton-project-detail"
 import { returnIcon } from "@/helpers/return-icon"
 
 const ProjectDetail = () => {
@@ -34,7 +35,7 @@ const ProjectDetail = () => {
   })
 
   if (isLoading) {
-    return <div className="text-white">Loading...</div>
+    return <SkeletonProjectDetail />
   }
 
   return (
@@ -127,7 +128,7 @@ const ProjectDetail = () => {
             </div>
           </div>
 
-          <div className="w-full max-w-[550px] rounded-[5px] bg-violet-horizontal p-[1px]">
+          <div className="w-full rounded-[5px] bg-violet-horizontal p-[1px] lg:max-w-[550px]">
             <div className="min-h-full w-full rounded-[5px] bg-purple-vertical px-2 py-5 lg:px-5">
               <h2 className="mb-2 font-bold text-secondary lg:mb-5 lg:text-xl">
                 Tecnologias
