@@ -51,31 +51,36 @@ export const TECHNOLOGIES = [
   },
   {
     id: "11",
+    name: "Prisma",
+    img: "/prisma.png",
+  },
+  {
+    id: "12",
     name: "PostgreSQL",
     img: "/postgresql.png",
   },
   {
-    id: "12",
+    id: "13",
     name: "Docker",
     img: "/docker.png",
   },
   {
-    id: "13",
+    id: "14",
     name: "Git",
     img: "/git.png",
   },
   {
-    id: "14",
+    id: "15",
     name: "GitHub",
     img: "/github.png",
   },
   {
-    id: "15",
+    id: "16",
     name: "Jest",
     img: "/jest.png",
   },
   {
-    id: "16",
+    id: "17",
     name: "Figma",
     img: "/figma.png",
   },
