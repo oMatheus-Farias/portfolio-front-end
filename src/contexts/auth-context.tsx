@@ -3,6 +3,8 @@ import { createContext, PropsWithChildren, useState } from "react"
 import { useMutation } from "react-query"
 import { useNavigate } from "react-router-dom"
 
+import { useToast } from "@/components/ui/use-toast"
+
 interface AuthContextData {
   user: UserData | null
   loading: boolean
@@ -28,6 +30,8 @@ const AuthProvider = ({ children }: PropsWithChildren) => {
   const [user, setUser] = useState<UserData | null>(null)
   const navigate = useNavigate()
 
+  const { toast } = useToast()
+
   const mutation = useMutation({
     mutationFn: async ({ email, password }: LoginData) => {
       return axios
@@ -39,17 +43,28 @@ const AuthProvider = ({ children }: PropsWithChildren) => {
     },
     onSuccess: (data) => {
       setUser(data)
-      alert("Login efetuado com sucesso!")
+
       navigate("/adminpanel")
+      toast({
+        variant: "default",
+        description: `Bem-vindo ${data?.firstName} ${data?.lastName}.`,
+      })
     },
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     onError: (error: any) => {
       if (error.response.status === 404) {
-        alert("E-mail ou senha inválidos.")
+        toast({
+          variant: "default",
+          description: "E-mail ou senha icorretos.",
+        })
         return
       }
 
-      return alert("Algo deu errado, tente novamente.")
+      toast({
+        variant: "default",
+        description: "Algo deu errado, tente novamente.",
+      })
+      return
     },
   })
   const loading = mutation.isLoading
