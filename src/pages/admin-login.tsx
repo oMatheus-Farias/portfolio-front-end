@@ -1,5 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useEffect } from "react"
+import { LoaderCircle } from "lucide-react"
+import { useContext, useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { useNavigate, useParams } from "react-router-dom"
 import { z } from "zod"
@@ -13,6 +14,7 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form"
+import { AuthContext } from "@/contexts/auth-context"
 
 const formSchema = z.object({
   email: z
@@ -37,6 +39,8 @@ const AdminLogin = () => {
   const { password } = useParams()
   const navigate = useNavigate()
 
+  const { loading, handleLogin } = useContext(AuthContext)
+
   useEffect(() => {
     if (password !== import.meta.env.VITE_SECRET_LOGIN) {
       return navigate("/")
@@ -52,7 +56,7 @@ const AdminLogin = () => {
   })
 
   const onSubmit = (data: FormData) => {
-    console.log(data)
+    handleLogin(data)
     form.reset()
   }
 
@@ -116,7 +120,14 @@ const AdminLogin = () => {
                 type="submit"
                 className="h-12 w-full rounded-[5px] bg-secondary text-lg font-bold uppercase text-white transition-all duration-300 ease-linear hover:bg-purpleClean sm:h-14 sm:text-xl"
               >
-                Login
+                {loading ? (
+                  <LoaderCircle
+                    color="#FFF"
+                    className="animate-spin duration-500"
+                  />
+                ) : (
+                  "Entrar"
+                )}
               </Button>
             </form>
           </Form>
