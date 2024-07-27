@@ -15,6 +15,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { AuthContext } from "@/contexts/auth-context"
+import { destroySigned } from "@/helpers/destroy-signed"
 
 const formSchema = z.object({
   email: z
@@ -40,6 +41,10 @@ const AdminLogin = () => {
   const navigate = useNavigate()
 
   const { loading, handleLogin } = useContext(AuthContext)
+
+  useEffect(() => {
+    destroySigned()
+  }, [])
 
   useEffect(() => {
     if (password !== import.meta.env.VITE_SECRET_LOGIN) {

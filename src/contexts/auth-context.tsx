@@ -43,6 +43,7 @@ const AuthProvider = ({ children }: PropsWithChildren) => {
     },
     onSuccess: (data) => {
       setUser(data)
+      localStorage.setItem("signed", JSON.stringify(true))
 
       navigate("/adminpanel")
       toast({

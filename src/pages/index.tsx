@@ -1,3 +1,5 @@
+import { useEffect } from "react"
+
 import { ButtonLink } from "@/components/button-link"
 import { CarouselProjects } from "@/components/carousel-projects"
 import { CarouselTechnologies } from "@/components/carousel-technologies"
@@ -9,9 +11,14 @@ import { HeaderMobile } from "@/components/header-mobile"
 import { MeImage } from "@/components/me-image"
 import { TitleComponent } from "@/components/title"
 import { ACTION_BUTTONS_LINKS } from "@/constants/action-buttons-links"
+import { destroySigned } from "@/helpers/destroy-signed"
 import { returnIcon } from "@/helpers/return-icon"
 
 const PortfolioPage = () => {
+  useEffect(() => {
+    destroySigned()
+  }, [])
+
   return (
     <div className="min-h-screen">
       <HeaderMobile />
