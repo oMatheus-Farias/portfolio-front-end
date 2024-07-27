@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { LoaderCircle } from "lucide-react"
+import { LoaderCircle, Lock, Mail } from "lucide-react"
 import { useContext, useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { useNavigate, useParams } from "react-router-dom"
@@ -88,12 +88,19 @@ const AdminLogin = () => {
                     render={() => (
                       <FormItem className="h-full">
                         <FormControl>
-                          <input
-                            {...form.register("email")}
-                            type="email"
-                            placeholder="E-mail"
-                            className="h-full w-full rounded-[5px] bg-primary px-4 text-white outline-none placeholder:text-purpleClean"
-                          />
+                          <div className="relative flex h-full items-center">
+                            <Mail
+                              color="#FFF"
+                              size={22}
+                              className="absolute left-4"
+                            />
+                            <input
+                              {...form.register("email")}
+                              type="email"
+                              placeholder="E-mail"
+                              className="h-full w-full rounded-[5px] bg-primary px-12 text-white outline-none placeholder:text-purpleClean"
+                            />
+                          </div>
                         </FormControl>
                         <FormMessage className="text-red-500" />
                       </FormItem>
@@ -107,12 +114,19 @@ const AdminLogin = () => {
                     render={() => (
                       <FormItem className="h-full">
                         <FormControl>
-                          <input
-                            {...form.register("password")}
-                            type="password"
-                            placeholder="Senha"
-                            className="h-full w-full rounded-[5px] bg-primary px-4 text-white outline-none placeholder:text-purpleClean"
-                          />
+                          <div className="relative flex h-full items-center">
+                            <Lock
+                              color="#FFF"
+                              size={22}
+                              className="absolute left-4"
+                            />
+                            <input
+                              {...form.register("password")}
+                              type="password"
+                              placeholder="Senha"
+                              className="h-full w-full rounded-[5px] bg-primary px-12 text-white outline-none placeholder:text-purpleClean"
+                            />
+                          </div>
                         </FormControl>
                         <FormMessage className="text-red-500" />
                       </FormItem>
