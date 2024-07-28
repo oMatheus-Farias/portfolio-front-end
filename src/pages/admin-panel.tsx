@@ -1,14 +1,17 @@
+import { HeaderAdminPanel } from "@/components/header-admin-panel"
 import { Sidebar } from "@/components/sidebar"
 
 const AdminPanel = () => {
   return (
     <div className="flex min-h-screen w-full">
-      <div className="hidden min-h-full w-72 lg:block">
+      <div className="hidden min-h-full min-w-72 lg:block">
         <Sidebar />
       </div>
 
-      <section>
-        <h1 className="text-white">Admin Panel</h1>
+      <section className="w-full">
+        <div className="h-[4.375rem] w-full">
+          <HeaderAdminPanel />
+        </div>
       </section>
     </div>
   )
