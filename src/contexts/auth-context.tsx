@@ -9,6 +9,7 @@ interface AuthContextData {
   user: UserData | null
   loading: boolean
   handleLogin: ({ email, password }: LoginData) => void
+  handleLogout: () => void
 }
 
 interface LoginData {
@@ -74,8 +75,14 @@ const AuthProvider = ({ children }: PropsWithChildren) => {
     mutation.mutate({ email, password })
   }
 
+  const handleLogout = () => {
+    setUser(null)
+    localStorage.removeItem("signed")
+    navigate("/")
+  }
+
   return (
-    <AuthContext.Provider value={{ user, loading, handleLogin }}>
+    <AuthContext.Provider value={{ user, loading, handleLogin, handleLogout }}>
       {children}
     </AuthContext.Provider>
   )
