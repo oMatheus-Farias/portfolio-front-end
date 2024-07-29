@@ -5,6 +5,7 @@ import { useQuery } from "react-query"
 import { IProjects } from "@/components/carousel-projects"
 import { HeaderAdminPanel } from "@/components/header-admin-panel"
 import { Sidebar } from "@/components/sidebar"
+import { TableProjects } from "@/components/table-projects"
 import { Button } from "@/components/ui/button"
 import { renderProjectsLength } from "@/helpers/render-prrojects-length"
 
@@ -30,7 +31,7 @@ const AdminPanel = () => {
 
   return (
     <div className="flex min-h-screen w-full">
-      <div className="hidden min-h-full min-w-72 lg:block">
+      <div className="hidden min-h-full min-w-72 xl:block">
         <Sidebar />
       </div>
 
@@ -48,6 +49,8 @@ const AdminPanel = () => {
               Cadastrar
             </Button>
           </div>
+
+          <TableProjects projects={data ? data : []} />
         </section>
       </div>
     </div>
