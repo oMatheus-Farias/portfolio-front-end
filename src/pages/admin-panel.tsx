@@ -1,12 +1,11 @@
 import axios from "axios"
-import { Plus } from "lucide-react"
 import { useQuery } from "react-query"
 
 import { IProjects } from "@/components/carousel-projects"
+import { DialogCreateProject } from "@/components/dialog-create-project"
 import { HeaderAdminPanel } from "@/components/header-admin-panel"
 import { Sidebar } from "@/components/sidebar"
 import { TableProjects } from "@/components/table-projects"
-import { Button } from "@/components/ui/button"
 import { renderProjectsLength } from "@/helpers/render-prrojects-length"
 
 const AdminPanel = () => {
@@ -44,10 +43,7 @@ const AdminPanel = () => {
           <div className="flex w-full items-center justify-between">
             {renderProjectsLength({ isLoading, data })}
 
-            <Button className="flex items-center justify-center gap-2 rounded-full bg-purpleClean px-5 py-5 text-lg font-medium text-white shadow-md transition-all duration-200 ease-linear hover:bg-secondary">
-              <Plus size={16} />
-              Cadastrar
-            </Button>
+            <DialogCreateProject />
           </div>
 
           <TableProjects projects={data ? data : []} />
