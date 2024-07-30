@@ -3,6 +3,7 @@ import { useState } from "react"
 
 import { IProjects } from "./carousel-projects"
 import { FormUpdateProject } from "./form-updated-project"
+import { Button } from "./ui/button"
 import {
   Dialog,
   DialogContent,
@@ -22,9 +23,9 @@ const DialogUpdateProject = ({ project }: DialogUpdateProjectProps) => {
   return (
     <Dialog open={openDialog} onOpenChange={setOpenDialog}>
       <DialogTrigger asChild>
-        <button className="text-white transition-all duration-200 ease-linear hover:text-secondary">
+        <Button className="p-0 text-white transition-all duration-200 ease-linear hover:text-secondary">
           <Pencil size={20} />
-        </button>
+        </Button>
       </DialogTrigger>
       <DialogContent className="max-h-[96%] max-w-[96%] overflow-auto rounded-lg border border-secondary bg-bgDark lg:max-w-[33.75rem] [&::-webkit-scrollbar]:hidden">
         <DialogHeader>
