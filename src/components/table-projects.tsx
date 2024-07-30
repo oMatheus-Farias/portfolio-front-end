@@ -1,6 +1,5 @@
-import { Trash } from "lucide-react"
-
 import { IProjects } from "./carousel-projects"
+import { DialogDeleteProject } from "./dialog-delete-project"
 import { DialogUpdateProject } from "./dialog-update-project"
 import { Card, CardContent } from "./ui/card"
 import {
@@ -87,12 +86,7 @@ const TableProjects = ({ projects }: TableProjectsProps) => {
                 </TableCell>
                 <TableCell className="flex justify-end gap-4">
                   <DialogUpdateProject project={project} />
-                  <button
-                    className="text-white transition-all duration-200 ease-linear hover:text-secondary"
-                    onClick={() => alert("delete")}
-                  >
-                    <Trash size={20} />
-                  </button>
+                  <DialogDeleteProject project={project} />
                 </TableCell>
               </TableRow>
             ))}
