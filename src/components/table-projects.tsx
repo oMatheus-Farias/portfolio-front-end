@@ -1,14 +1,7 @@
-import { Pencil, Trash } from "lucide-react"
-
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
+import { Trash } from "lucide-react"
 
 import { IProjects } from "./carousel-projects"
+import { DialogUpdateProject } from "./dialog-update-project"
 import { Card, CardContent } from "./ui/card"
 import {
   Table,
@@ -93,80 +86,7 @@ const TableProjects = ({ projects }: TableProjectsProps) => {
                   {project.technologies.join(", ")}
                 </TableCell>
                 <TableCell className="flex justify-end gap-4">
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <button className="text-white transition-all duration-200 ease-linear hover:text-secondary">
-                        <Pencil size={20} />
-                      </button>
-                    </DialogTrigger>
-                    <DialogContent className="border border-secondary bg-bgDark">
-                      <DialogHeader>
-                        <DialogTitle className="flex items-center gap-2 text-white">
-                          <Pencil size={20} />
-                          Editar projeto
-                        </DialogTitle>
-                      </DialogHeader>
-
-                      <form className="mt-4 flex flex-col gap-4">
-                        <div>
-                          <label
-                            htmlFor="name-project"
-                            className="text-sm text-white"
-                          >
-                            Nome do projeto
-                          </label>
-                          <input
-                            id="name-project"
-                            type="text"
-                            className="mt-2 h-10 w-full rounded border border-purpleClean bg-transparent px-3 text-white outline-none"
-                            placeholder="Nome do projeto"
-                          />
-                        </div>
-                        <div>
-                          <label
-                            htmlFor="name-project"
-                            className="text-sm text-white"
-                          >
-                            Descrição
-                          </label>
-                          <input
-                            id="name-project"
-                            type="text"
-                            className="mt-2 h-10 w-full rounded border border-purpleClean bg-transparent px-3 text-white outline-none"
-                            placeholder="Descrição do projeto"
-                          />
-                        </div>
-                        <div>
-                          <label
-                            htmlFor="name-project"
-                            className="text-sm text-white"
-                          >
-                            URL primeira imagem
-                          </label>
-                          <input
-                            id="name-project"
-                            type="text"
-                            className="mt-2 h-10 w-full rounded border border-purpleClean bg-transparent px-3 text-white outline-none"
-                            placeholder="URL primeira imagem"
-                          />
-                        </div>
-                        <div>
-                          <label
-                            htmlFor="name-project"
-                            className="text-sm text-white"
-                          >
-                            URL segunda imagem
-                          </label>
-                          <input
-                            id="name-project"
-                            type="text"
-                            className="mt-2 h-10 w-full rounded border border-purpleClean bg-transparent px-3 text-white outline-none"
-                            placeholder="URL segunda imagem"
-                          />
-                        </div>
-                      </form>
-                    </DialogContent>
-                  </Dialog>
+                  <DialogUpdateProject project={project} />
                   <button
                     className="text-white transition-all duration-200 ease-linear hover:text-secondary"
                     onClick={() => alert("delete")}
