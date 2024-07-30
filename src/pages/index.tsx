@@ -25,7 +25,10 @@ const PortfolioPage = () => {
       <HeaderDesktop />
 
       <section className="flex pl-5 lg:px-20">
-        <div className="absolute mt-16 flex max-w-56 flex-col gap-2 sm:max-w-[23.75rem] md:max-w-[25rem] lg:top-40 lg:max-w-[33.125rem] 2xl:max-w-[37.5rem]">
+        <div
+          data-aos="fade-right"
+          className="absolute mt-16 flex max-w-56 flex-col gap-2 sm:max-w-[23.75rem] md:max-w-[25rem] lg:top-40 lg:max-w-[33.125rem] 2xl:max-w-[37.5rem]"
+        >
           <h1 className="text-sm font-bold text-secondary sm:text-3xl">
             Um pouco sobre mim
           </h1>

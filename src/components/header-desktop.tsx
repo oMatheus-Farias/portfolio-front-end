@@ -7,7 +7,10 @@ import Logo from "./logo"
 
 const HeaderDesktop = () => {
   return (
-    <header className="absolute hidden h-20 w-full items-center justify-between px-20 lg:flex">
+    <header
+      data-aos="zoom-in"
+      className="absolute hidden h-20 w-full items-center justify-between px-20 lg:flex"
+    >
       <Logo className={"w-48"} />
 
       <nav className="font-semibold text-white">

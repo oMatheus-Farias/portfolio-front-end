@@ -66,7 +66,10 @@ const ProjectDetail = () => {
 
       <div className="relative mx-auto flex max-w-[1600px] flex-col gap-2 px-5 lg:gap-5 lg:px-20">
         <div className="z-10 -mt-28 flex w-full gap-2 lg:-mt-14 lg:gap-5">
-          <div className="flex flex-col gap-2 lg:gap-5">
+          <div
+            data-aos="fade-up-right"
+            className="flex flex-col gap-2 lg:gap-5"
+          >
             <div className="h-32 w-28 flex-1 rounded-[5px] bg-violet-horizontal p-[1px] lg:h-52 lg:w-44">
               <div className="flex h-full w-full flex-col items-center justify-center gap-3 rounded-[5px] bg-purple-vertical p-2 lg:justify-between lg:px-4 lg:py-6">
                 <img
@@ -104,7 +107,10 @@ const ProjectDetail = () => {
             </div>
           </div>
 
-          <div className="min-h-full w-full rounded-[5px] bg-violet-horizontal p-[1px]">
+          <div
+            data-aos="flip-up"
+            className="min-h-full w-full rounded-[5px] bg-violet-horizontal p-[1px]"
+          >
             <div className="h-full max-h-[262px] w-full overflow-hidden rounded-[5px] bg-purple-vertical lg:min-h-[450px]">
               <img
                 src={data?.imagesUrl[1]}
@@ -128,7 +134,7 @@ const ProjectDetail = () => {
             </div>
           </div>
 
-          <div className="w-full rounded-[5px] bg-violet-horizontal p-[1px] lg:max-w-[550px]">
+          <div className="w-full rounded-[5px] bg-violet-horizontal p-[1px] lg:max-w-[34.375rem]">
             <div className="min-h-full w-full rounded-[5px] bg-purple-vertical px-2 py-5 lg:px-5">
               <h2 className="mb-2 font-bold text-secondary lg:mb-5 lg:text-xl">
                 Tecnologias
