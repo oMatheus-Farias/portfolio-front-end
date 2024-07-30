@@ -26,7 +26,7 @@ const DialogUpdateProject = ({ project }: DialogUpdateProjectProps) => {
           <Pencil size={20} />
         </button>
       </DialogTrigger>
-      <DialogContent className="max-h-[96%] overflow-auto border border-secondary bg-bgDark [&::-webkit-scrollbar]:hidden">
+      <DialogContent className="max-h-[96%] max-w-[96%] overflow-auto rounded-lg border border-secondary bg-bgDark lg:max-w-[33.75rem] [&::-webkit-scrollbar]:hidden">
         <DialogHeader>
           <DialogDescription></DialogDescription>
           <DialogTitle className="flex items-center gap-2 text-white">
