@@ -62,7 +62,6 @@ const AdminLogin = () => {
 
   const onSubmit = (data: FormData) => {
     handleLogin(data)
-    form.reset()
   }
 
   return (
