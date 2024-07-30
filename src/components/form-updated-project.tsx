@@ -162,6 +162,7 @@ const FormUpdateProject = ({
                   {...form.register("description")}
                   id="description"
                   type="text"
+                  maxLength={255}
                   className="mt-2 h-10 w-full rounded border border-purpleClean bg-transparent px-3 text-white outline-none"
                   placeholder="Descrição do projeto"
                 />
