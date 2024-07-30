@@ -3,5 +3,6 @@ export const destroySigned = () => {
 
   if (signed === true) {
     localStorage.removeItem("signed")
+    localStorage.removeItem("user")
   }
 }
