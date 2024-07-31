@@ -112,11 +112,18 @@ const ProjectDetail = () => {
             className="min-h-full w-full rounded-[5px] bg-violet-horizontal p-[1px]"
           >
             <div className="h-full max-h-[262px] w-full overflow-hidden rounded-[5px] bg-purple-vertical lg:min-h-[450px]">
-              <img
-                src={data?.imagesUrl[1]}
-                alt={data?.name}
-                className="h-full w-full object-cover"
-              />
+              <a
+                href={data?.projectUrl || ""}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={data?.imagesUrl[1]}
+                  alt={data?.name}
+                  title="Visualizar projeto"
+                  className="h-full w-full object-cover transition-all duration-300 ease-out hover:scale-105"
+                />
+              </a>
             </div>
           </div>
         </div>
