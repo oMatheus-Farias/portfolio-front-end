@@ -65,11 +65,11 @@ const CarouselProjects = () => {
         }}
         className="w-full overflow-hidden lg:mt-28"
       >
-        <CarouselContent className="w-full gap-8 px-5 lg:px-20">
+        <CarouselContent className="w-full gap-4 px-5 lg:px-20">
           {projects?.map((item) => (
             <CarouselItem
               key={item.id}
-              className="flex h-[25rem] basis-[22.5rem] items-center lg:basis-[34.375rem]"
+              className="flex h-[25rem] basis-[21.25rem] items-center lg:basis-[34.375rem]"
             >
               <CardProjects
                 id={item.id}
