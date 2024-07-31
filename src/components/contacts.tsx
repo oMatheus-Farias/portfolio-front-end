@@ -26,7 +26,7 @@ const ContactsComponent = () => {
 
       <div className="flex flex-col items-center gap-2 lg:gap-3" title="GitHub">
         <a
-          href="https://www.linkedin.com/in/matheusfariasdasneves"
+          href="https://github.com/oMatheus-Farias"
           target="_blank"
           rel="noopener noreferrer"
         >
