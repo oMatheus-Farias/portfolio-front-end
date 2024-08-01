@@ -17,7 +17,7 @@ const HeaderAdminPanel = () => {
       <div className="flex h-full w-full items-center justify-between bg-bgDark px-7">
         <h1 className="font-bold text-white">Painel de Controle</h1>
 
-        <Logo className="w-52" />
+        <Logo className="hidden w-52 md:block" />
 
         <button onClick={handleLogoutClick} title="Sair">
           <LogOut className="text-white transition-all duration-200 ease-linear hover:text-secondary" />

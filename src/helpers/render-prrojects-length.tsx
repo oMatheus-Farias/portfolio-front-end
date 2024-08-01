@@ -12,7 +12,7 @@ export const renderProjectsLength = ({
   data,
 }: RenderProjectsLengthProps) => {
   return (
-    <span className="flex items-center gap-2 font-semibold text-white">
+    <span className="flex items-center gap-2 text-sm font-semibold text-white sm:text-base">
       Projetos cadastrados:
       {isLoading ? (
         <LoaderCircle color="#FFF" size={16} className="animate-spin" />
