@@ -5,7 +5,7 @@ import { Separator } from "./ui/separator"
 
 const Sidebar = () => {
   return (
-    <aside className="h-full w-full bg-violet-vertical pr-[1px]">
+    <aside className="h-screen w-full bg-violet-vertical pr-[1px]">
       <div className="flex h-full w-full flex-col items-center bg-bgDark px-8">
         <div className="mt-16 flex w-full flex-col gap-14">
           <AvatarSidebar />
