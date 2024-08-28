@@ -64,8 +64,6 @@ const AdminLogin = () => {
     handleLogin(data)
   }
 
-  console.log("password")
-
   return (
     <section className="flex min-h-screen w-full flex-col items-center justify-center bg-background-login bg-cover bg-center bg-no-repeat">
       <div className="relative flex w-full flex-col items-center justify-center">
