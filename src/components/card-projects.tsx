@@ -10,7 +10,7 @@ const CardProjects = ({ id, name, image }: CardProjectsProps) => {
   return (
     <Link
       to={`/projectdetail/${id}`}
-      className="relative h-[17.5rem] w-[24.375rem] overflow-hidden rounded-[0.625rem] border-[3px] border-secondary transition-all duration-200 ease-linear hover:scale-[1.02] hover:grayscale-0 lg:h-[21.875rem] lg:w-[34.375rem] lg:grayscale"
+      className="relative h-[17.5rem] w-[24.375rem] select-none overflow-hidden rounded-[0.625rem] border-[3px] border-secondary transition-all duration-200 ease-linear hover:scale-[1.02] hover:grayscale-0 lg:h-[21.875rem] lg:w-[34.375rem] lg:grayscale"
     >
       <div className="absolute bottom-4 left-4">
         <h4 className="bg-violet-horizontal bg-clip-text text-2xl font-extrabold text-transparent lg:text-3xl">
